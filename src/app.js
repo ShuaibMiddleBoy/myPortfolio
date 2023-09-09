@@ -5,6 +5,8 @@ const app = express();
 // Import the database connection from your db folder
 require("./db/conn.js");
 
+//  Import the users messages model
+const UsersMessagesModel = require("./models/usersMessages.js");
 // Import the view engine (hbs)
 const hbs = require("hbs");
 
@@ -35,6 +37,8 @@ app.set("views", "templates/views");
 // Serve static files from the defined directory
 app.use(express.static(staticPath));
 
+app.use(express.urlencoded({extended:false}));
+
 
 
 
@@ -52,8 +56,14 @@ app.get("/", (req, res) => {
 
 // Define a duplicate route for the root URL ("/"). When a user accesses the root URL,
 // the server responds with "Hello Shuaib".
-app.get("/", (req, res) => {
-    res.send("Hello Shuaib");
+app.post("/contact", async (req, res) => {
+try {
+    const userMessageData = new UsersMessagesModel(req.body);
+    await userMessageData.save();
+    res.redirect("/");
+} catch (error) {
+    res.status(500).send(error);
+}
 });
 
 
