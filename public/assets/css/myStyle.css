@@ -1,0 +1,69 @@
+#contact{
+    margin-top: 90px;
+}
+#contact .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+#contact .form > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Add some vertical spacing between form elements */
+}
+
+#contact .form > div label {
+    font-weight: bold; /* Make labels bold for clarity */
+    margin-bottom: 5px;
+}
+
+#contact .form > div input,
+#contact .form > div textarea {
+    width: 100%;
+    padding: 10px; /* Add padding for input fields */
+    border: 1px solid #ccc; /* Add a border for input fields */
+    border-radius: 5px; /* Add border-radius for input fields */
+    resize: none;
+    outline-style: none;
+}
+
+/* Change the color of placeholder text */
+#contact .form > div input::placeholder,
+#contact .form > div textarea::placeholder{
+    color: #b4b4b4; /* Change the color to your desired value */
+}
+
+
+
+
+
+
+
+#contact .form input[type="submit"] {
+    display: inline-block !important;
+    padding: 10px 20px !important;
+    width: 200px;
+    color: #ffffff !important;
+    border: 1px solid #4b8ef1;
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-size: 15px;
+    display: inline-block;
+    background: linear-gradient(105deg, rgba(91,104,235,1) 0%, rgba(40,225,253,1) 100%);
+    border-radius: 23px;
+    font-weight: 500 !important;
+    letter-spacing: 0.3px !important;
+    transition: all .5s;
+    margin-left: auto;
+}
+
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+    #contact .form {
+        max-width: 90%; /* Reduce the form's maximum width for small screens */
+    }
+}

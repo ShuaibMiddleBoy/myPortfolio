@@ -1,0 +1,41 @@
+<section id="contact">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <h4>Contact <em>Me</em></h4>
+                    <img src="assets/images/heading-line-dec.png" alt="">
+                    <p>Feel free to get in touch with me using the form <a href="#contact">below:</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <form class="form" id="form" action="/contact" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="userName" placeholder="Enter your full name" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="userEmail" placeholder="Enter your email address" required>
+        </div>
+
+        <div>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="userSubject" placeholder="Enter the subject of your message" required>
+        </div>
+
+        <div>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="userMessage" rows="4" placeholder="Enter your message here" required></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</section>
